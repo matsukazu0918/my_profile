@@ -1,0 +1,44 @@
+@media all and (max-width: 1000px) {
+
+    .about-container {
+        display: block;
+    }
+
+    .about-text {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .skill {
+        margin: 10px 10px;
+        font-size: 20px;
+    }
+
+    .contact-list li {
+    	width: auto;
+    }
+
+}
+
+@media all and (max-width: 670px) {
+    .top-name {
+        font-size: 30px;
+    }
+
+    .skill {
+        margin: 10px 10px;
+        font-size: 10px;
+    }
+
+    .skill img {
+        width: 50px;
+    }
+
+    #service-wrapper {
+        background-position: center;
+    }
+
+    #service-wrapper {
+    	margin-bottom: 400px;
+    }
+}

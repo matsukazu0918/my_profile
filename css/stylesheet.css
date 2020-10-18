@@ -1,0 +1,344 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Serif', serif;
+    text-align: center;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#wrapper {
+    width: 100%;
+    position: relative;
+}
+
+#top-wrapper {
+    background-image: url(../img/ocean.jpg);
+    background-size: cover;
+    position: sticky;
+    top: 0;
+    z-index: -10;
+}
+
+/*ハンガーメニュ*/
+#hanger {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 10;
+}
+
+.menu-trigger,
+.menu-trigger span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+}
+
+.menu-trigger {
+    position: relative;
+    width: 50px;
+    height: 44px;
+}
+
+.menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #800000;
+    border-radius: 4px;
+}
+
+.menu-trigger:hover {
+    opacity: 0.5;
+}
+
+.top {
+    top: 0;
+}
+
+.middle {
+    top: 20px;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+/*.top .active {
+    -webkit-transform: translateY(20px) rotate(-45deg);
+    transform: translateY(20px) rotate(-45deg);
+    background-color: #fff;
+}
+
+.middle .active {
+    opacity: 0;
+}
+
+.bottom .active {
+    -webkit-transform: translateY(-20px) rotate(45deg);
+    transform: translateY(-20px) rotate(45deg);
+    background-color: #fff;
+}*/
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    color: #fff;
+    opacity: 0.9;
+    width: 100%;
+    min-height: 100%;
+    display: none;
+    z-index: 9;
+}
+
+.overlay-menu {
+    margin-top: 100px;
+}
+
+#overlay li {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#overlay a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#overlay a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 4px;
+  background: #800000;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
+}
+#overlay a:hover::after {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+/*ハンガーメニュ end*/
+
+.top-container {
+    padding: 300px 0;
+    color: white;
+    letter-spacing: 10px;
+}
+
+.top-name {
+    font-size: 50px;
+}
+
+.top-job {
+    font-weight: bold;
+}
+
+/*js.fadeIn用*/
+.fade-in {
+    transform: translate3d(0, -30px, 0);
+    transition: 2s;
+    opacity: 0;
+}
+
+.fade-in.animated {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+/*js.fadeIn用*/
+
+#about-wrapper {
+    background-image: url(../img/bridge.jpg);
+    background-size: cover;
+}
+
+.about-title,
+.skill-title,
+.service-title,
+.footer-title {
+    font-size: 30px;
+    padding-top: 30px;
+}
+
+.about-container {
+    display: flex;
+    margin: 0 auto;
+    padding: 40px 30px 100px 30px;
+}
+
+.my-photo img {
+    width: 100%;
+    border-radius: 10%;
+}
+
+.about-text {
+    margin-left: 30px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-introduction {
+    font-size: 15px;
+    line-height: 45px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.work-style {
+    color: red;
+}
+
+#skill-wrapper {
+    background-color: white;
+    background-image: url(../img/tairu.jpg);
+    background-size: cover;
+}
+
+.skill-title,
+.service-title,
+.footer-title {
+    margin-bottom: 30px;
+}
+
+.skill-container {
+    padding-bottom: 100px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: white;
+    border: outset 10px;
+    border-radius: 10px;
+}
+
+.skill {
+    margin: 20px 30px;
+    font-weight: bold;
+}
+
+#service-wrapper {
+    background-image: url(../img/wolf.jpg);
+    background-size: cover;
+    margin-bottom: 280px;
+}
+
+.service-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.service {
+    width: 80%;
+}
+
+.service img {
+    border-radius: 50%;
+    width: 50%;
+}
+
+.service-name {
+    margin: 15px 0;
+}
+
+.service-text {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.service-text p {
+    padding: 10px 20px 10px 20px;
+}
+
+.service-exception {
+    font-weight: bold;
+    padding-bottom: 50px;
+}
+
+footer {
+    width: 100%;
+    background-image: url(../img/star2.jpg);
+    background-size: cover;
+    background-position: left center;
+    color: white;
+    position: absolute;
+    bottom: 0;
+}
+
+
+.contact-text p {
+    font-weight: bold;
+}
+
+.contact-container {
+    margin: 30px 0;
+}
+
+.contact-list li {
+    width: 10%;
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 10px 10px;
+    transition-duration: 0.5s;
+    border-radius: 50%;
+}
+
+.cc {
+    font-size: 40px;
+    color: white;
+}
+
+.mail:hover {
+    background-color: #dd4b39;
+}
+
+.twitter:hover {
+    background-color: #1DA1F2;
+}
+
+.instagram:hover {
+    background-color: #D93177;
+}
+
+.blog:hover {
+    background-color: #21759b;
+}
+
+.git:hover {
+    background-color: #777777;
+}
+
+#copyright {
+    margin-bottom: 20px;
+}
